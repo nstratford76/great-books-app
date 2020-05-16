@@ -1,5 +1,9 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
+const cors = require('cors')
+
+const express = require('express');
+const app = express();
 
 let _db;
 const mongoConnect = callback => {
@@ -24,6 +28,9 @@ const getDb = () => {
   }
   throw 'No database found!';
 };
+
+
+
 
 exports.mongoConnect = mongoConnect;
 exports.getDb = getDb;
