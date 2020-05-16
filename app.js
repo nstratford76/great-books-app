@@ -37,6 +37,14 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
  // Place this with other requires (like 'path' and 'express')
+ app.set('port', process.env.PORT || 5000)
+  .use(express.static(__dirname + '/public'))
+  .set('views', __dirname + '/views')
+  .set('view engine', 'ejs')
+  .get('/', jsonEngine.processJson)
+  .listen(app.get('port'), function() {
+  	console.log('Listening on port: ' + app.get('port'));
+  });
 const corsOptions = {
     origin: "https://great-books-store.herokuapp.com/",
     optionsSuccessStatus: 200
@@ -66,8 +74,8 @@ mongoose
     console.log(err);
   });
 
-mongoConnect(() => {
+//mongoConnect(() => {
   
-  app.listen(3000);
-});
+  //app.listen(3000);
+//});
 
