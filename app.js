@@ -1,4 +1,5 @@
 const path = require('path');
+const cors = require('cors')
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -34,7 +35,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-const cors = require('cors') // Place this with other requires (like 'path' and 'express')
+ // Place this with other requires (like 'path' and 'express')
 const corsOptions = {
     origin: "https://great-books-store.herokuapp.com/",
     optionsSuccessStatus: 200
