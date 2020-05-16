@@ -8,7 +8,7 @@
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Nathan Stratford",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.3"
@@ -17,10 +17,10 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^3.1.0",
     "mongodb": "^3.5.7",
-    "mysql2": "^1.6.1",
-    "pug": "^2.0.3",
+    "mysql2": "^1.7.0",
+    "pug": "^2.0.4",
     "sequelize": "^5.21.9"
   }
 }
